@@ -1,0 +1,15 @@
+body {
+    font-family: Montserrat;
+    text-align: center;
+    background-image: url("../pictures/space.jpeg");
+}
+
+#clock {
+    margin-top: 2em;
+    color: white;
+    font-size: 6em;
+}
+
+.date {
+    color: lightgray;
+}
