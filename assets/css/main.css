@@ -1,15 +1,61 @@
 body {
     font-family: Montserrat;
     text-align: center;
-    background-image: url("../pictures/space.jpeg");
+    background-image: url("../pictures/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
 }
 
 #clock {
     margin-top: 2em;
     color: white;
-    font-size: 6em;
+    font-size: 8em;
 }
 
-.date {
+#date {
     color: lightgray;
+    font-size: 2em;
+}
+
+#search {
+    border-width: 0px;
+    margin-top: 2em;
+    height: 50px;
+    width: 800px;
+    font-size: 35px;
+    outline-width: 0px;
+    border-radius: 60px;
+    padding: 7px 30px 7px 30px;
+}
+
+.favorites {
+    color: white;
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: all ease-in-out .25s;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+ul {
+    list-style: none;
+}
+
+.favorites li {
+    display: inline;
+    padding: 1em;
 }

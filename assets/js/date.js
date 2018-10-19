@@ -1,35 +1,20 @@
 function startDate() {
-    var today2 = new Date();
-    var D2 = today2.getDay();
-    var d2 = today2.getDate()
-    var M2 = today2.getMonth();
-    var Y2 = today2.getFullYear();
-    D2 = checkDate(D2);
-    d2 = checkDate(d2);
-    M2 = checkDate(M2);
-    Y2 = checkDate(Y2);
-    if(d2 = 0) {
-        d2 = "Monday";
-    }else if(d2 = 1){
-        d2 = "Tuesday";
-    }else if(d2 = 1){
-        d2 = "Wednesday";
-    }else if(d2 = 1){
-        d2 = "Thursday";
-    }else if(d2 = 1){
-        d2 = "Friday";
-    }else if(d2 = 1){
-        d2 = "Saturday";
-    }else {
-        d2 = "Sunday"
+    var d = new Date();
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    var ending = "th";
+    if(d.getDate() == 1) {
+        ending = "st";
+    }else if(d.getDate() == 2) {
+        ending = "nd";
+    }else if (d.getDate() == 3) {
+        ending = "rd";
     }
-    document.getElementById('date').innerHTML = d2 + " " + M2;
+
+    document.getElementById('date').innerHTML = days[d.getDay()] + ", " + d.getDate() + ending + " " + months[d.getMonth()] + " " + d.getFullYear();
     var t = setTimeout(startTime, 500);
 }
-function checkDate(i) {
-    if (i < 10) {i = "0" + i};
-    return i;
-}
 document.addEventListener('DOMContentLoaded', function() {
-    startTime();
+    startDate();
 });
